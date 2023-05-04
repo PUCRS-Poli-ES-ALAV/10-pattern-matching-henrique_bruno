@@ -1,4 +1,4 @@
-public class Enunciado1{
+public class Enunciado1Bruno{
     public static void main(String[] args){
        String s1 = "ABCDEFGHIJKLMN";
        String s2 = "EFGH";
@@ -8,10 +8,8 @@ public class Enunciado1{
 
     public static int stringMatch(String s1, String s2){
         for(int i=0; i<s1.length(); i++){
-            int j=0;
             
-            if(s1.charAt(i) == s2.charAt(j)){
-                int pos = i;
+            if(s1.charAt(i) == s2.charAt(0)){
                 int aux = i;
 
                for(int k = 0; k<=s2.length(); k++){
@@ -21,7 +19,7 @@ public class Enunciado1{
                         aux++;
                     
                     if(k==s2.length()-1){
-                        return pos;
+                        return i;
                     }
                }
             }
