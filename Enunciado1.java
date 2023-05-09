@@ -3,7 +3,6 @@ import static java.util.Objects.hash;
 public class Enunciado1 {
     private static long R = 26;
 
-    private static final long R = 26;
 
     public static void main (String[] args) {
         System.out.println(stringMatch("ABCDCBDCBDACBDABDCBADF", "ADF"));
