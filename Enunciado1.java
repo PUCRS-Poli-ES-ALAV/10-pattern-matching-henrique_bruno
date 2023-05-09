@@ -2,11 +2,7 @@ import static java.util.Objects.hash;
 
 public class Enunciado1 {
     private static long R = 26;
-<<<<<<< Updated upstream
-
-=======
     private static int Q = 2147483647;
->>>>>>> Stashed changes
 
     public static void main (String[] args) {
         // System.out.println(stringMatch("ABCDCBDCBDACBDABDCBADF", "ADF"));
