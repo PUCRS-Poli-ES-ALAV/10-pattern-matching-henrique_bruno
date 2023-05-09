@@ -1,6 +1,11 @@
+import static java.util.Objects.hash;
+
 public class Enunciado1 {
+    private static final long R = 26;
+
     public static void main (String[] args) {
         System.out.println(stringMatch("ABCDCBDCBDACBDABDCBADF", "ADF"));
+        System.out.println(search("ABCDCBDCBDACBDABDCBADF", "ADF"));
 
     }
 
@@ -24,4 +29,18 @@ public class Enunciado1 {
        }
         return 0;
     }
+
+    private static int search(String pat, String txt) {
+        int M = pat.length();
+        int N = txt.length();
+        long patHash = hash(pat, M);
+
+        for (int i = 0; i <= N - M; i++) {
+            long txtHash = hash(txt.substring(i, i+M), M);
+            if (patHash == txtHash)
+                return i; // ocorrência? colisão?
+        }
+        return N; // nenhuma ocorrência
+    }
+
 }
