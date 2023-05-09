@@ -1,6 +1,8 @@
 import static java.util.Objects.hash;
 
 public class Enunciado1 {
+    private static long R = 26;
+
     private static final long R = 26;
 
     public static void main (String[] args) {
@@ -42,5 +44,14 @@ public class Enunciado1 {
         }
         return N; // nenhuma ocorrência
     }
+
+    private long hash(String s, int M) {
+        long h = 0;
+        for (int j = 0; j < M; j++)
+           h = (h * R + s.charAt(j)) % Q;
+        return h;
+     }
+
+
 
 }
